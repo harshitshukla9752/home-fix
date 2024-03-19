@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login-Home-Fix</title>
+    
+    <style>
+      body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, Times, serif, 'Times New Roman', Times, serif;
+            background: url('back.jpg');
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .header {
+            position: relative;
+            height: 30px;
+            background-color:  #ffe1008e;
+            background-size:cover;
+            color: #1e1616;
+            padding: 1em;
+            text-align: center;
+        }
+
+        .menu {
+            position: absolute;
+            top: 1em;
+            right: 20px;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 30px;
+            right: 0;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        h1 {
+            margin: 0;
+            font-size: 24px; 
+        } 
+
+        .container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            margin-top: 50px;
+            overflow: hidden;
+            animation: slideIn 1.0s ease-out;
+            margin-top: 4%;
+            margin-left:auto;
+            margin-right:auto;
+            box-sizing: border-box;
+        }
+
+        @keyframes slideIn {
+      from {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: 1px solid #666666;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #ffd000;
+            color: #000000;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+        p {
+            color: #000000;
+            margin-top: 20px;
+        }
+
+        p a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        p a:hover {
+            text-decoration: underline;
+        }
+        
+    </style>
+    
+</head>
+<body>
+   
+  <div class="header">
+    <h1>Home Fix <img src="#" alt="Company Logo" ></h1>
+    <div class="menu" onclick="toggleDropdown()">
+        <img src="https://img.icons8.com/material-rounded/24/000000/menu.png"/>
+        <div id="myDropdown" class="dropdown-content">
+            <a href="home.html">Home Page</a>
+                <a href="services.html">Services</a>
+                <a href="contactsupport.html">Contact Support</a>
+                <a href="aboutus.html">About Us</a>
+                <a href="feedback.html">Feedback Us</a>
+            </div>
+    </div>
+</div>
+
+     
+    <div class="container" >
+        <form action="login.php" method="post">
+            <h1 style="font-size: 30px;">Login</h1>
+            <input type="text" name="username or email" placeholder="Username or email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+            <p>Don't have an account! <a href="signup.html">Signup </a></p>
+        </form>
+    </div>
+
+    <script>
+      function toggleDropdown() {
+          var dropdown = document.getElementById("myDropdown");
+          dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+      }
+  </script>
+</body>
+</html>

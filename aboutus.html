@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Tento</title>
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            line-height: 1.6;
+            margin: 20px;
+            -webkit-text-fill-color: #050505;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        p {
+            color: #555;
+        }
+        body {
+           background: url('background.jpeg');
+           background-size:cover;
+        }
+        *{box-sizing: border-box;}
+        .footer{
+            text-align:bottom ;
+            width:100%;
+            background-color: #565656;
+        }
+        .header-container {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            
+            width: 100%;
+            text-align: upperside;
+            
+            
+        }
+
+       
+        .main-content {
+            padding: 20px;
+        }
+
+        
+        nav {
+            background-color: transparent;
+            background: url('header.png');
+           background-size:cover;
+            padding: 10px;
+            text-align: left;
+        }
+        nav a {
+            color: #050505;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        nav a:hover{
+            text-decoration: underline;
+            color: #2c2c2c;
+        }
+
+        .container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.744);
+            padding: 40px;
+            width: 400px;
+            text-align: center;
+            margin-top: 50px;
+            display:flex
+            
+            
+        }
+
+        .header {
+            background-color: transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: right;
+            margin-right: 5px;
+            height: fit-content;
+        }
+
+        .logo img {
+            position: absolute;
+            color: #343a40;
+        }
+
+        .logo h1 {
+            position: absolute;
+            font-size: 1.8em;
+            color: #343a40;
+        }
+        
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+        }
+
+        p {
+            color: #6c757d;
+            margin-top: 20px;
+        }
+
+        p a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        p a:hover {
+            text-decoration: underline;
+        }
+
+
+
+
+
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, Times, serif, 'Times New Roman', Times, serif;
+            background: url('back.jpg');
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .header {
+            position: relative;
+            height: 30px;
+            background-color:  #ffe1008e;
+            background-size:cover;
+            color: #1e1616;
+            padding: 1em;
+            text-align: center;
+        }
+
+        .menu {
+            position: absolute;
+            top: 1em;
+            right: 20px;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 30px;
+            right: 0;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        h1 {
+            margin: 0;
+            font-size: 24px; 
+        } 
+
+        .container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            margin-top: 50px;
+            overflow: hidden;
+            animation: slideIn 1.0s ease-out;
+            margin-top: 4%;
+            margin-left:auto;
+            margin-right:auto;
+            box-sizing: border-box;
+        }
+
+        @keyframes slideIn {
+      from {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: 1px solid #666666;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #ffd000;
+            color: #000000;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+        p {
+            color: #000000;
+            margin-top: 20px;
+        }
+
+        p a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        p a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Home Fix <img src="#" alt="Company Logo" ></h1>
+        <div class="menu" onclick="toggleDropdown()">
+            <img src="https://img.icons8.com/material-rounded/24/000000/menu.png"/>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="home.html">Home Page</a>
+                <a href="services.html">Services</a>
+                <a href="contactsupport.html">Contact Support</a>
+                <a href="aboutus.html">About Us</a>
+                <a href="feedback.html">Feedback Us</a>
+            </div>
+        </div>
+    </div>
+    
+
+    <header>
+        <div style="-webkit-text-fill-color: #ffffff;">
+        <h1>Welcome to Tento - Your Ultimate Event Partner</h1>
+    </div>
+    </header>
+</div> 
+    <section>
+        <form> <style>
+            .container{
+                max-width: auto;
+                width: auto;
+                height: fit-content;
+                margin-top: auto;
+                }
+                dl, ol, ul {
+                    list-style: inside;
+                    }
+                    </style>
+                    <div class="container">
+                        
+        </style>
+        <h2>About Us</h2>
+        <p>
+            At Tento, we understand the importance of creating unforgettable moments in life, and we're here to make your events truly special. Whether it's a celebration in the comfort of your home or a grand event in a marriage garden, we provide exceptional tent house services and catering solutions tailored to your unique needs.
+        </p>
+    
+
+        <h2>Our Services</h2>
+        <p>
+            Tento offers a wide range of services to ensure your event is a resounding success. From providing stylish and comfortable tent houses for any occasion to offering exquisite catering services, we've got you covered. Our user-friendly online booking system makes the entire process seamless, allowing you to plan your event with ease.
+        </p>
+    
+
+        <h2>Expense Calculation Made Easy</h2>
+        <p>
+            Planning an event involves careful budgeting, and Tento is here to assist you. Our website features an expense calculation tool that helps you estimate costs and stay within your budget. With transparency and clarity in mind, we strive to make the financial aspect of event planning stress-free for our clients.
+        </p>
+    </form>
+</div>
+<form> 
+    <div class="container">
+    <style>
+    .container{
+        max-width: auto;
+        width: auto;
+        margin-bottom: 5%;
+        height: fit-content;
+        }
+        dl, ol, ul {
+            list-style: inside;
+            }
+            </style>     
+</style>
+
+        <h2>Why Choose Us?</h2>
+        <p>
+            <strong>Exceptional Service:</strong> Our dedicated team is committed to providing top-notch service, ensuring every detail of your event is taken care of with precision and care.
+        </p>
+        <p>
+            <strong>Wide Range of Options:</strong> Tento offers a diverse selection of tent houses and catering packages to suit various preferences and event sizes.
+        </p>
+        <p>
+            <strong>Convenience:</strong> With our user-friendly online booking system, you can plan and book your event services from the comfort of your home, saving you time and effort.
+        </p>
+        <p>
+            <strong>Transparent Pricing:</strong> We believe in transparent pricing, and our expense calculation tool helps you understand and plan your budget effectively.
+        </p>
+    </section>
+</form>
+</div>
+    <footer>
+        <p>Thank you for choosing Tento for your special events. We look forward to making your moments unforgettable!</p>
+    </footer>
+
+
+    <script>
+        function toggleDropdown() {
+            var dropdown = document.getElementById("myDropdown");
+            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</body>
+</html>
+

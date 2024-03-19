@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Search</title>
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            background: url('background.jpeg');
+           background-size:cover;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1px;
+            width: 100%;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .vendor {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 8px;
+        }
+
+        input {
+            padding: 8px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            background-color: transparent;
+            background: url('footer.png');
+           background-size:cover;
+            text-align: center;
+            padding: 1em;
+            background-color: #333;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        *{box-sizing: border-box;}
+        .footer{
+            background-color: transparent;
+            background: url('footer.png');
+           background-size:cover;
+            text-align:bottom ;
+            width:100%;
+            background-color: #565656;
+        }
+        .header-container {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            
+            width: 100%;
+            text-align: upperside;
+            
+            
+        }
+
+       
+        .main-content {
+            padding: 20px;
+        }
+
+        
+        nav {
+            background-color: transparent;
+            background: url('header-nav.png');
+           background-size:cover;
+            padding: 10px;
+            text-align: left;
+        }
+        nav a {
+            color: #050505;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        nav a:hover{
+            text-decoration: underline;
+            color: #2c2c2c;
+        }
+              
+        body {
+            background: url('background.jpeg');
+           background-size:cover;
+        }
+
+        .container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            width: 400px;
+            text-align: center;
+            margin-top: 50px;
+            display:flex
+            
+            
+        }
+
+        .header {
+            background-color: transparent;
+            background: url('header.png');
+           background-size:cover;
+            display: flex;
+            justify-content: space-between;
+            align-items: right;
+            margin-right: 10px;
+        }
+
+        .logo img {
+            position: absolute;
+            width: 60px; 
+            height: auto;
+            top: 70px;
+            right:200px;
+            color: #343a40;
+        }
+
+        .logo h1 {
+            position: absolute;
+            margin: 0;
+            top: 150px;
+            right: 100px;
+            font-size: 1.8em;
+            color: #343a40;
+        }
+        
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 20%;
+            padding: 12px;
+            background: url('footer.png');
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #005bbb;
+        }
+
+        p {
+            color: #6c757d;
+            margin-top: 20px;
+        }
+
+        p a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        p a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-container">
+<nav><a href="home.html"  style="align-content: left;">Home</a>
+        <a href="aboutus.html" style="align-content: left;">About Us</a>
+        <a href="contactsupport.html" style="align-content: left;">Contact Support</a>
+                      <h1>Tento <img src="#" alt="Company Logo" style="width: 150px;height: 150px;align-content: center;margin-left: 580px;"></h1>
+    </nav>
+</div>
+    <header>
+        <h1>Vendor Search</h1>
+    </header>
+
+    <section>
+        <h2>Find Vendors in Your Locality</h2>
+
+        <form action="#" method="post">
+            <label for="location">Enter Your Location:</label>
+            <input type="text" id="location" name="location" placeholder="E.g., City, Neighborhood" required>
+
+            <button type="submit">Search</button>
+        </form>
+
+        <h2>Search Results</h2>
+
+        <div class="vendor">
+            <h3>Vendor 1</h3>
+            <p>Description of the vendor and their services. You can include details such as capacity, amenities, etc.</p>
+            <button>Contact Vendor</button>
+        </div>
+
+        <div class="vendor">
+            <h3>Vendor 2</h3>
+            <p>Description of the vendor and their services. You can include details such as capacity, amenities, etc.</p>
+            <button>Contact Vendor</button>
+        </div>
+
+        <div class="vendor">
+          <h3>Vendor 3</h3>
+          <p>Description of the vendor and their services. You can include details such as capacity, amenities, etc.</p>
+          <button>Contact Vendor</button>
+      </div>
+
+      <div class="vendor">
+        <h3>Vendor 4</h3>
+        <p>Description of the vendor and their services. You can include details such as capacity, amenities, etc.</p>
+        <button>Contact Vendor</button>
+    </div>
+
+        <!-- Add more vendors as needed -->
+    </section>
+
+    <footer>
+        &copy; 2023 Tento Vendor Search. All rights reserved.
+    </footer>
+
+</body>
+</html>
