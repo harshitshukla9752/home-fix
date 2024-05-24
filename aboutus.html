@@ -3,124 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Tento</title>
+    <title>About Us - Home Fix</title>
     <style>
-        body {
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            line-height: 1.6;
-            margin: 20px;
-            -webkit-text-fill-color: #050505;
-        }
-        h1, h2 {
-            color: #333;
-        }
-        p {
-            color: #555;
-        }
-        body {
-           background: url('background.jpeg');
-           background-size:cover;
-        }
-        *{box-sizing: border-box;}
-        .footer{
-            text-align:bottom ;
-            width:100%;
-            background-color: #565656;
-        }
-        .header-container {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            
-            width: 100%;
-            text-align: upperside;
-            
-            
-        }
-
-       
-        .main-content {
-            padding: 20px;
-        }
-
-        
-        nav {
-            background-color: transparent;
-            background: url('header.png');
-           background-size:cover;
-            padding: 10px;
-            text-align: left;
-        }
-        nav a {
-            color: #050505;
-            margin: 0 15px;
-            text-decoration: none;
-        }
-        nav a:hover{
-            text-decoration: underline;
-            color: #2c2c2c;
-        }
-
-        .container {
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.744);
-            padding: 40px;
-            width: 400px;
-            text-align: center;
-            margin-top: 50px;
-            display:flex
-            
-            
-        }
-
-        .header {
-            background-color: transparent;
-            display: flex;
-            justify-content: space-between;
-            align-items: right;
-            margin-right: 5px;
-            height: fit-content;
-        }
-
-        .logo img {
-            position: absolute;
-            color: #343a40;
-        }
-
-        .logo h1 {
-            position: absolute;
-            font-size: 1.8em;
-            color: #343a40;
-        }
-        
-        input {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 20px;
-            box-sizing: border-box;
-            border: 1px solid #ced4da;
-            border-radius: 4px;
-        }
-
-        p {
-            color: #6c757d;
-            margin-top: 20px;
-        }
-
-        p a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        p a:hover {
-            text-decoration: underline;
-        }
-
-
-
-
-
         body {
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, Times, serif, 'Times New Roman', Times, serif;
             background: url('back.jpg');
@@ -131,12 +15,21 @@
         
         .header {
             position: relative;
-            height: 30px;
-            background-color:  #ffe1008e;
-            background-size:cover;
+            height: 60px;
+            background-color: rgba(255, 225, 0, 0.6);
             color: #1e1616;
             padding: 1em;
             text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            display: inline-block;
+        }
+
+        .header img {
+            vertical-align: middle;
         }
 
         .menu {
@@ -149,7 +42,7 @@
         .dropdown-content {
             display: none;
             position: absolute;
-            top: 30px;
+            top: 40px;
             right: 0;
             background-color: #f9f9f9;
             min-width: 160px;
@@ -167,47 +60,37 @@
         .dropdown-content a:hover {
             background-color: #f1f1f1;
         }
-        h1 {
-            margin: 0;
-            font-size: 24px; 
-        } 
 
-        .container {
-            background-color: #ffffff;
+        .main-content {
+            background-color: rgba(255, 255, 255, 0.8);
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             padding: 40px;
-            max-width: 400px;
-            width: 100%;
-            text-align: center;
-            margin-top: 50px;
-            overflow: hidden;
-            animation: slideIn 1.0s ease-out;
-            margin-top: 4%;
-            margin-left:auto;
-            margin-right:auto;
-            box-sizing: border-box;
+            max-width: 800px;
+            margin: 50px auto;
+            text-align: left;
         }
 
-        @keyframes slideIn {
-      from {
-        transform: translateY(-50px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
+        h2 {
+            color: #333;
+            margin-top: 0;
+        }
 
-    
-        input {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 20px;
-            box-sizing: border-box;
-            border: 1px solid #666666;
-            border-radius: 4px;
+        p {
+            color: #555;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #565656;
+            color: #fff;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         button {
@@ -223,24 +106,11 @@
         button:hover {
             background-color: #0056b3;
         }
-        p {
-            color: #000000;
-            margin-top: 20px;
-        }
-
-        p a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        p a:hover {
-            text-decoration: underline;
-        }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1>Home Fix <img src="#" alt="Company Logo" ></h1>
+        <h1>Home Fix <img src="#" alt="Company Logo"></h1>
         <div class="menu" onclick="toggleDropdown()">
             <img src="https://img.icons8.com/material-rounded/24/000000/menu.png"/>
             <div id="myDropdown" class="dropdown-content">
@@ -252,77 +122,24 @@
             </div>
         </div>
     </div>
-    
 
-    <header>
-        <div style="-webkit-text-fill-color: #ffffff;">
-    </div>
-    </header>
-</div> 
-    <section>
-        <form> <style>
-            .container{
-                max-width: auto;
-                width: auto;
-                height: fit-content;
-                margin-top: auto;
-                }
-                dl, ol, ul {
-                    list-style: inside;
-                    }
-                    </style>
-                    <div class="container">
-                        
-        </style>
+    <div class="main-content">
         <h2>About Us</h2>
-        <p>
-        </p>
-    
+        <p>Welcome to Home Fix, your number one source for all things home improvement. We're dedicated to providing you the very best of services, with an emphasis on quality, customer service, and reliability.</p>
 
         <h2>Our Services</h2>
-        <p>
-        </p>
-    
-
-        <h2></h2>
-        <p>
-        </p>
-    </form>
-</div>
-<form> 
-    <div class="container">
-    <style>
-    .container{
-        max-width: auto;
-        width: auto;
-        margin-bottom: 5%;
-        height: fit-content;
-        }
-        dl, ol, ul {
-            list-style: inside;
-            }
-            </style>     
-</style>
+        <p>We offer a wide range of home improvement services to meet all your needs. From plumbing to electrical work, we've got you covered.</p>
 
         <h2>Why Choose Us?</h2>
-        <p>
-            <strong>Exceptional Service:</strong> 
-        </p>
-        <p>
-            <strong>Wide Range of Options:</strong> 
-        </p>
-        <p>
-            <strong>Convenience:</strong> 
-        </p>
-        <p>
-            <strong>Transparent Pricing:</strong>
-    </section>
-</form>
-</div>
-    <footer>
-        <p</p>
-    </footer>
+        <p><strong>Exceptional Service:</strong> We pride ourselves on delivering top-notch service to our clients.</p>
+        <p><strong>Wide Range of Options:</strong> Whatever your home improvement needs, we have a solution.</p>
+        <p><strong>Convenience:</strong> We offer flexible scheduling and comprehensive services to make your life easier.</p>
+        <p><strong>Transparent Pricing:</strong> Our pricing is clear and upfront, with no hidden fees.</p>
+    </div>
 
+    <div class="footer">
+        <p>&copy; 2024 Home Fix. All rights reserved.</p>
+    </div>
 
     <script>
         function toggleDropdown() {
@@ -332,4 +149,3 @@
     </script>
 </body>
 </html>
-
