@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home fix</title>
+    <style>
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, Times, serif, 'Times New Roman', Times, serif;
+            background: url('back.jpg');
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .header {
+            position: relative;
+            height: 30px;
+            background-color:  #ffe1008e;
+            background-size:cover;
+            color: #1e1616;
+            padding: 1em;
+            text-align: center;
+        }
+
+        .menu {
+            position: absolute;
+            top: 1em;
+            right: 20px;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 30px;
+            right: 0;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .buttons {
+            position: absolute;
+            top: 0.5em;
+            left: 20px;
+        }
+
+        .buttons button {
+            width: 100px;
+            padding: 12px;
+            background-color: #e8e8e8;
+            color: #000000;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            margin-right: 10px;
+            
+        }
+        button:hover {
+            background-color: #535454;
+            color: #ffffff;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 24px; 
+        }
+        section {
+            padding: 2em;
+        }
+
+        .feedback-form {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 2em;
+            border-radius: 15px;
+            max-width: 600px;
+            margin: 2em auto;
+        }
+
+        .feedback-form h2 {
+            font-size: 24px;
+            margin-bottom: 1em;
+        }
+
+        .feedback-form label {
+            display: block;
+            margin-bottom: 0.5em;
+            font-weight: bold;
+        }
+
+        .feedback-form input,
+        .feedback-form textarea {
+            width: 100%;
+            padding: 0.5em;
+            margin-bottom: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .feedback-form button {
+            width: 100%;
+            padding: 1em;
+            background-color: #fea449;
+            color: #000000;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        .feedback-form button:hover {
+            background-color: #0056b3;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="buttons">
+            <button onclick="window.location.href='login.html'">Login</button>
+            <button onclick="window.location.href='signup.html'">Signup</button>
+        </div>
+        <h1>Home Fix <img src="#" alt="Company Logo" ></h1>
+        <div class="menu" onclick="toggleDropdown()">
+            <img src="https://img.icons8.com/material-rounded/24/000000/menu.png"/>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="home.html">Home Page</a>
+                <a href="services.html">Services</a>
+                <a href="contactsupport.html">Contact Support</a>
+                <a href="aboutus.html">About Us</a>
+                <a href="feedback.html">Feedback Us</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="feedback-form">
+        <h2>Feedback Form</h2>
+        <form action="submit_feedback.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <script>
+        function toggleDropdown() {
+            var dropdown = document.getElementById("myDropdown");
+            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</body>
+</html>
