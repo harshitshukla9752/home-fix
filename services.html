@@ -3,264 +3,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vendor Search</title>
+    <title>Service Page</title>
     <style>
         body {
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            background-color: #f4f4f4;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, Times, serif, 'Times New Roman', Times, serif;
+            background: url('back.jpg');
+            background-size: cover;
             margin: 0;
             padding: 0;
-            background: url('background.jpeg');
-           background-size:cover;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1px;
-            width: 100%;
-        }
-
-        section {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .vendor {
-            margin-bottom: 20px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        form {
+            height: 100vh;
             display: flex;
             flex-direction: column;
         }
 
-        label {
-            margin-bottom: 8px;
-        }
-
-        input {
-            padding: 8px;
-            margin-bottom: 16px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        button {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #555;
-        }
-
-        footer {
-            background-color: transparent;
-            background: url('footer.png');
-           background-size:cover;
-            text-align: center;
-            padding: 1em;
-            background-color: #333;
-            color: #fff;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        
-        *{box-sizing: border-box;}
-        .footer{
-            background-color: transparent;
-            background: url('footer.png');
-           background-size:cover;
-            text-align:bottom ;
-            width:100%;
-            background-color: #565656;
-        }
-        .header-container {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            
-            width: 100%;
-            text-align: upperside;
-            
-            
-        }
-
-       
-        .main-content {
-            padding: 20px;
-        }
-
-        
-        nav {
-            background-color: transparent;
-            background: url('header-nav.png');
-           background-size:cover;
-            padding: 10px;
-            text-align: left;
-        }
-        nav a {
-            color: #050505;
-            margin: 0 15px;
-            text-decoration: none;
-        }
-        nav a:hover{
-            text-decoration: underline;
-            color: #2c2c2c;
-        }
-              
-        body {
-            background: url('background.jpeg');
-           background-size:cover;
-        }
-
-        .container {
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 40px;
-            width: 400px;
-            text-align: center;
-            margin-top: 50px;
-            display:flex
-            
-            
+        .header, .footer {
+            flex-shrink: 0;
         }
 
         .header {
-            background-color: transparent;
-            background: url('header.png');
-           background-size:cover;
-            display: flex;
-            justify-content: space-between;
-            align-items: right;
-            margin-right: 10px;
+            position: relative;
+            height: 30px;
+            background-color: #ffe1008e;
+            background-size: cover;
+            color: #1e1616;
+            padding: 1em;
+            text-align: center;
         }
 
-        .logo img {
+        .menu {
             position: absolute;
-            width: 60px; 
-            height: auto;
-            top: 70px;
-            right:200px;
-            color: #343a40;
-        }
-
-        .logo h1 {
-            position: absolute;
-            margin: 0;
-            top: 150px;
-            right: 100px;
-            font-size: 1.8em;
-            color: #343a40;
-        }
-        
-        input {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 20px;
-            box-sizing: border-box;
-            border: 1px solid #ced4da;
-            border-radius: 4px;
-        }
-
-        button {
-            width: 20%;
-            padding: 12px;
-            background: url('footer.png');
-            color: #ffffff;
-            border: none;
-            border-radius: 4px;
+            top: 1em;
+            right: 20px;
             cursor: pointer;
         }
 
-        button:hover {
-            background: #005bbb;
+        .footer {
+            height: 40px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            z-index: 1;
         }
 
-        p {
-            color: #6c757d;
-            margin-top: 20px;
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 30px;
+            right: 0;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
         }
 
-        p a {
-            color: #007bff;
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
             text-decoration: none;
+            display: block;
         }
 
-        p a:hover {
-            text-decoration: underline;
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .buttons {
+            position: absolute;
+            top: 0.5em;
+            left: 20px;
+        }
+
+        .buttons button {
+            width: 100px;
+            padding: 12px;
+            background-color: #e8e8e8;
+            color: #000000;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        button:hover {
+            background-color: #535454;
+            color: #ffffff;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            margin-top: auto;
+            margin-bottom: auto;
+            overflow-y: auto;
+        }
+
+        .service-details, .reviews {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 2em;
+            width: 100%;
+            border-radius: 15px;
+            max-width: 1450px;
+            margin: 2em auto;
+            overflow-y: auto;
+        }
+
+        .service-details {
+            margin-bottom: 1em;
+        }
+
+        .service-details h2 {
+            font-size: 24px;
+            margin-bottom: 1em;
+        }
+
+        .service-details p {
+            margin-bottom: 1em;
+        }
+
+        .service-details .book-now {
+            display: block;
+            width: 20%;
+            padding: 1em;
+            background-color: #e8e8e8;
+            color: #000000;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .service-details .book-now:hover {
+            background-color: #535454;
+            color: #ffffff;
+        }
+
+        .review {
+            border-bottom: 1px solid #797979;
+            padding: 10px 0;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 24px;
         }
     </style>
 </head>
 <body>
-    <div class="header-container">
-<nav><a href="home.html"  style="align-content: left;">Home</a>
-        <a href="aboutus.html" style="align-content: left;">About Us</a>
-        <a href="contactsupport.html" style="align-content: left;">Contact Support</a>
-                      <h1>Tento <img src="#" alt="Company Logo" style="width: 150px;height: 150px;align-content: center;margin-left: 580px;"></h1>
-    </nav>
-</div>
-    <header>
-        <h1>Vendor Search</h1>
+    <header class="header">
+        <h1>Service Page</h1>
+        <div class="menu" onclick="toggleDropdown()">
+            <img src="https://img.icons8.com/material-rounded/24/000000/menu.png"/>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="services.html">Services</a>
+                <a href="contactsupport.html">Contact Support</a>
+                <a href="aboutus.html">About Us</a>
+                <a href="feedback.html">Feedback Us</a>
+            </div>
+        </div>
     </header>
-
-    <section>
-        <h2>Find Vendors in Your Locality</h2>
-
-        <form action="#" method="post">
-            <label for="location">Enter Your Location:</label>
-            <input type="text" id="location" name="location" placeholder="E.g., City, Neighborhood" required>
-
-            <button type="submit">Search</button>
-        </form>
-
-        <h2>Search Results</h2>
-
-        <div class="vendor">
-            <h3>Vendor 1</h3>
-            <p>Description of the vendor and their services. You can include details such as capacity, amenities, etc.</p>
-            <button>Contact Vendor</button>
+    <main>
+        <section class="service-details">
+            <div class="review">
+                <h2>Service Name</h2>
+                <p>Description of the service provided by the service provider.</p>
+                <p><strong>Price:</strong> $100</p>
+                <p><strong>Provider:</strong> John Doe</p>
+                <button class="book-now">Book Now</button>
+            </div>
+            <div class="review">
+                <h2>Service Name</h2>
+                <p>Description of the service provided by the service provider.</p>
+                <p><strong>Price:</strong> $100</p>
+                <p><strong>Provider:</strong> John Doe</p>
+                <button class="book-now">Book Now</button>
+            </div>
+            <div class="review">
+                <h2>Service Name</h2>
+                <p>Description of the service provided by the service provider.</p>
+                <p><strong>Price:</strong> $100</p>
+                <p><strong>Provider:</strong> John Doe</p>
+                <button class="book-now">Book Now</button>
+            </div>
+            <div class="review">
+                <h2>Service Name</h2>
+                <p>Description of the service provided by the service provider.</p>
+                <p><strong>Price:</strong> $100</p>
+                <p><strong>Provider:</strong> John Doe</p>
+                <button class="book-now">Book Now</button>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Your Company. All rights reserved.</p>
         </div>
-
-        <div class="vendor">
-            <h3>Vendor 2</h3>
-            <p>Description of the vendor and their services. You can include details such as capacity, amenities, etc.</p>
-            <button>Contact Vendor</button>
-        </div>
-
-        <div class="vendor">
-          <h3>Vendor 3</h3>
-          <p>Description of the vendor and their services. You can include details such as capacity, amenities, etc.</p>
-          <button>Contact Vendor</button>
-      </div>
-
-      <div class="vendor">
-        <h3>Vendor 4</h3>
-        <p>Description of the vendor and their services. You can include details such as capacity, amenities, etc.</p>
-        <button>Contact Vendor</button>
-    </div>
-
-        <!-- Add more vendors as needed -->
-    </section>
-
-    <footer>
-        &copy; 2023 Tento Vendor Search. All rights reserved.
     </footer>
 
+    <script>
+        function toggleDropdown() {
+            var dropdown = document.getElementById("myDropdown");
+            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+        }
+    </script>
 </body>
 </html>
